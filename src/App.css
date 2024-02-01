@@ -1,0 +1,292 @@
+/* .container {
+    padding : 30px;  
+    margin-top: 50px;
+  }
+  
+  .container .card {
+    position: relative;
+    max-width : 220px;
+    height : 120px;  
+    background-color : #fff;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+  }
+  .container .card:hover {
+    height : 300px;    
+  }
+  
+  
+  .container .card .image {
+    position : relative;
+    top : -40%;
+    left: 8px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+  }
+  
+  .container .card .image img {
+    border-radius : 15px;
+  }
+  
+  .container .card .content {
+    position : relative;
+    top : -110px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out; 
+  }
+  
+  .container .card:hover .content {
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+  } */
+
+/* ///////////////////////////////////////////why us cards */
+
+   .cardd {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .cardd img {
+    object-fit: fill;
+    width: 8rem;
+    height: 8rem;
+    /* transition: opacity 1s ease-out; */
+  }
+ 
+  .cardd h2 {
+    position: absolute;
+    inset: auto auto 20px 30px;
+    color: #848484;
+    /* transition: inset 0.3s 0.3s ease-out; */
+    font-weight: normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .cardd p {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    /* transition: opacity 0.3s ease-out; */
+  }
+  
+  .cardd p {
+    inset: auto auto 80px 30px;
+  }
+  
+  .cardd:hover h2 {
+    inset: auto auto 200px 30px;
+    /* transition: inset 0.2s ease-out; */
+    color: white;
+    margin-left: 0%;
+  }
+  .cardd:hover{
+    transition: 0.3s ease-out ;
+    background-color: #0854C1;
+  }
+  .cardd:hover p {
+    opacity: 1;
+    /* transition: opacity 0.1s 0.1s ease-in; */
+  }
+  
+  .cardd:hover img {
+    /* transition: opacity 0.3s ease-in; */
+    opacity: 0;
+  }
+  
+ 
+
+
+/* ///////////////////////////////////////////services */
+
+  figure {
+    border-radius: 10rem;
+    cursor: pointer;
+    width: 165px;
+    transition: 0.1s;
+  }
+
+  figure:hover {
+    transform: scale(1.2);
+    transition: 0.21s;
+  }
+
+
+/* ///////////////////////////////////////////technology slider */
+  .slider {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    margin-top: 10px;
+  }
+  
+  .slide-track {
+    display: flex;
+  }
+  
+  .slide {
+    width: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px); 
+  }
+
+
+
+/* ///////////////////////////////////////////stepper */
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.ff {
+  width: 100%;
+}
+
+#debt-amount-slider {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  user-select: none;
+}
+
+#debt-amount-slider::before {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+#debt-amount-slider label {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  height: 100%;
+}
+
+#debt-amount-slider label::after {
+  content: attr(data-number);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0854C1;
+  font-weight: bold;
+}
+
+#debt-amount-slider label[data-number="1"]:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: transparent;
+  background-image: url("./Media/Group.png");
+  width: 40%;
+  height: 100px;
+  background-size: cover;
+  content: '';
+}
+
+#debt-amount-slider label[data-number="2"]:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: transparent;
+  background-image: url("./Media/Ai.png");
+  width: 40%;
+  height: 100px;
+  background-size: cover;
+  content: '';
+}
+
+#debt-amount-slider label[data-number="3"]:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: transparent;
+  background-image: url("./Media/phone.jpg.png");
+  width: 40%;
+  height: 100px;
+  background-size: cover;
+  content: '';
+}
+
+#debt-amount-slider label[data-number="4"]:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: transparent;
+  background-image: url("./Media/Android_logo_\(2014-2019\).png");
+  width: 40%;
+  height: 100px;
+  background-size: cover;
+  content: '';
+}
+
+#debt-amount-slider label[data-number="5"]:hover::after {
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: transparent;
+  background-image: url("./Media/Group.png");
+  width: 40%;
+  height: 100px;
+  background-size: cover;
+  content: '';
+}
+
+
+
